@@ -252,6 +252,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- Fixed the managed Claude Code statusline showing `CAVEMAN:CAVEMAN` with caveman 4.x, which writes the active skill id instead of the mode name: `caveman` now renders as `CAVEMAN`, `ultracave` as `CAVEMAN:ULTRA` and `megacave` as `CAVEMAN:WENYAN`
 - Fixed provisioning failing when a formula Sparkdock removes, such as `lima`, is required by another installed package such as `colima`: the formula is now kept with a warning naming the packages that need it
 - Fixed `herdr-agent-resume` recipes printing a `just` "recipe failed" line after the command already reported the problem
 - Fixed `sf-openspec-install-global` failing with OpenSpec 2.1: it installs the global skills with `openspec init --scope global` from `~/.local/share/sparkdock/openspec-global`, so nothing is scaffolded in the home folder, and a failed skills refresh only warns
